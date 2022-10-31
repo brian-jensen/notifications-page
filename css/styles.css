@@ -8,13 +8,22 @@
   padding: 0;
 }
 
-input, select, textarea, button {
+input,
+select,
+textarea,
+button {
   border: none;
   box-shadow: none;
   outline: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 a {
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -22,20 +31,131 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: inherit;
+  color: #5E6778;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-body {
+
+body,
+button,
+h2,
+a,
+.text {
+  font-size: 14px;
+  line-height: 18px;
+  color: #5E6778;
   font-family: var(--font-primary);
 }
 
 .wrapper {
+  padding: 24px 16px 29px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.notifications {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 800;
+  margin: 0 9px 0 0;
+  color: #1C202B;
+}
+
+header .counter {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  width: 32px;
+  height: 25px;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background: #0A327B;
+  border-radius: 6px;
+}
+
+article {
+  display: flex;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+article.active {
+  background-color: #F7FAFD;
+}
+
+article+article {
+  margin-top: 10px;
+}
+
+article img {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  margin-right: 13px;
+}
+
+article h2 {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1C202B;
+  display: inline-block;
+}
+
+.text {
+  display: inline;
+  font-weight: 500;
+}
+
+.message h2::after,
+.message .text::after,
+article.active .message a::after {
+  content: '\00A0';
+}
+
+.time {
+  margin-top: 3px;
+  color: #939CAD;
+}
+
+a.group {
+  color: #0A327B;
+}
+
+.private {
+  margin-top: 12px;
+  padding: 16px;
+  border: 1px solid #DDE7EE;
+  border-radius: 5px;
+}
+
+article.active span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #F65552;
+  border-radius: 50%;
+}
+
+.chess-img {
+  border-radius: 7px;
+  margin-right: 0;
+  margin-left: 12px;
 }
